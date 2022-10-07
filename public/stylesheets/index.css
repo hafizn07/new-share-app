@@ -1,0 +1,404 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100vh;
+  margin: 0;
+}
+
+body {
+  font-family: "DM Sans", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  overflow: hidden;
+  overflow-x: hidden;
+  background-image: linear-gradient(to top, #a3bded 0%, #6991c7 100%);
+  background-position: center;
+  background-size: cover;
+  padding: 20px;
+}
+
+:root {
+  --dark-font: #0f0f10;
+  --light-font: #79798c;
+}
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.app-container {
+  position: relative;
+  border-radius: 10px;
+  width: 35%;
+  height: 85%;
+  max-width: 1200px;
+  max-height: 900px;
+  background: linear-gradient(180deg, #e0e9fd 0%, #e9ecf1 90%);
+  box-shadow: 0 0 0 10px rgba(255, 255, 255, 0.4);
+  display: flex;
+  overflow: hidden;
+}
+
+/* =============== Main area =============== */
+
+.main-area {
+  flex: 1;
+  display: flex;
+  height: 100%;
+  overflow-y: auto;
+  background: linear-gradient(97deg, #f2f7fd 0%, #f0f4fd 90%);
+  border-radius: 0 10px 10px 0;
+  padding-bottom: 24px;
+  position: relative;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.main-area-header {
+  padding: 24px 40px;
+  background: linear-gradient(97deg, #f2f7fd 0%, #f0f4fd 90%);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+/* =============== Main content section =============== */
+
+.content-section {
+  display: flex;
+  margin-top: -20px;
+  overflow-x: hidden;
+  padding: 0 40px;
+  flex-direction: column;
+  align-items: center;
+  align-content: space-around;
+}
+
+.password-area {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* =============== File-Upload section =============== */
+
+.file-upload {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#custom-button {
+  padding: 10px;
+  color: white;
+  background-color: #009578;
+  border: 1px solid #000;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#custom-button:hover {
+  background-color: #00b28f;
+}
+
+#custom-text {
+  font-family: sans-serif;
+  color: #aaa;
+}
+
+/* =============== Password form Area =============== */
+
+.form__input {
+  width: 350px;
+  height: 40px;
+  margin: 15px 15px 4px 15px;
+  padding-left: 25px;
+  font-size: 16px;
+  letter-spacing: 0.25px;
+  border: none;
+  outline: none;
+  font-family: "Montserrat", sans-serif;
+  background-color: #ecf0f3;
+  transition: 0.25s ease;
+  border-radius: 8px;
+  box-shadow: inset 2px 2px 4px #d1d9e6, inset -2px -2px 4px #f9f9f9;
+}
+.form__input:focus {
+  box-shadow: inset 4px 4px 4px #d1d9e6, inset -4px -4px 4px #f9f9f9;
+}
+
+/* =============== Download button =============== */
+
+.btn-download {
+  display: flex;
+  margin-top: 12px;
+  justify-content: center;
+}
+
+button {
+  margin: 20px;
+}
+
+.custom-btn {
+  width: 220px;
+  height: 40px;
+  color: #fff;
+  border-radius: 5px;
+  padding: 10px 25px;
+  font-family: "Lato", sans-serif;
+  font-weight: 500;
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  display: inline-block;
+  box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, 0.5),
+    7px 7px 20px 0px rgba(0, 0, 0, 0.1), 4px 4px 5px 0px rgba(0, 0, 0, 0.1);
+  outline: none;
+}
+
+.btn-6 {
+  background: rgb(247, 150, 192);
+  background: radial-gradient(
+    circle,
+    rgba(247, 150, 192, 1) 0%,
+    rgba(118, 174, 241, 1) 100%
+  );
+  line-height: 42px;
+  padding: 0;
+  border: none;
+}
+.btn-6 span {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.btn-6:before,
+.btn-6:after {
+  position: absolute;
+  content: "";
+  height: 0%;
+  width: 1px;
+  box-shadow: -1px -1px 20px 0px rgba(255, 255, 255, 1),
+    -4px -4px 5px 0px rgba(255, 255, 255, 1),
+    7px 7px 20px 0px rgba(0, 0, 0, 0.4), 4px 4px 5px 0px rgba(0, 0, 0, 0.3);
+}
+.btn-6:before {
+  right: 0;
+  top: 0;
+  transition: all 500ms ease;
+}
+.btn-6:after {
+  left: 0;
+  bottom: 0;
+  transition: all 500ms ease;
+}
+.btn-6:hover {
+  background: transparent;
+  color: #76aef1;
+  box-shadow: none;
+}
+.btn-6:hover:before {
+  transition: all 500ms ease;
+  height: 100%;
+}
+.btn-6:hover:after {
+  transition: all 500ms ease;
+  height: 100%;
+}
+.btn-6 span:before,
+.btn-6 span:after {
+  position: absolute;
+  content: "";
+  box-shadow: -1px -1px 20px 0px rgba(255, 255, 255, 1),
+    -4px -4px 5px 0px rgba(255, 255, 255, 1),
+    7px 7px 20px 0px rgba(0, 0, 0, 0.4), 4px 4px 5px 0px rgba(0, 0, 0, 0.3);
+}
+.btn-6 span:before {
+  left: 0;
+  top: 0;
+  width: 0%;
+  height: 0.5px;
+  transition: all 500ms ease;
+}
+.btn-6 span:after {
+  right: 0;
+  bottom: 0;
+  width: 0%;
+  height: 0.5px;
+  transition: all 500ms ease;
+}
+.btn-6 span:hover:before {
+  width: 100%;
+}
+.btn-6 span:hover:after {
+  width: 100%;
+}
+
+/* =============== Upload section =============== */
+
+.label {
+  padding: 12px 10px 0 6px;
+  height: 31px;
+  width: 240px;
+  font-size: 12px;
+  text-align: left;
+  color: #111;
+}
+
+.copy-text {
+  position: relative;
+  padding: 5px;
+  height: 50px;
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.copy-text input.text {
+  padding: 10px;
+  font-size: 15px;
+  color: #555;
+  border: none;
+  outline: none;
+}
+
+.copy-text button {
+  padding: 7px;
+  background: #5784f5;
+  color: #fff;
+  font-size: 16px;
+  border: none;
+  outline: none;
+  margin-right: 3px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.copy-text button:active {
+  background: #809ce2;
+}
+
+.copy-text button:before {
+  content: "Copied";
+  position: absolute;
+  top: -32px;
+  right: -10px;
+  background: #5c81dcc9;
+  padding: 7px 12px;
+  border-radius: 15px;
+  font-size: 10px;
+  display: none;
+}
+
+.copy-text button:after {
+  content: "";
+  position: absolute;
+  top: -10px;
+  right: 15px;
+  width: 7px;
+  height: 7px;
+  background: #5c81dcc9;
+  transform: rotate(45deg);
+  display: none;
+}
+
+.copy-text.active button:before,
+.copy-text.active button:after {
+  display: block;
+}
+
+/* =============== Footer section =============== */
+
+footer {
+  display: flex;
+  justify-content: center;
+}
+footer h4 {
+  color: #9ea3af;
+}
+
+@media screen and (min-width: 850px) and (max-width: 1042px) {
+  .access-icon {
+    padding: 16px;
+  }
+
+  .access-icon svg {
+    width: 20px;
+    height: 20px;
+  }
+}
+@media screen and (max-width: 900px) {
+  .access-icon svg {
+    width: 36px;
+    height: 36px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .left-area {
+    transform: translateX(-100%);
+    opacity: 0;
+    position: absolute;
+    z-index: 2;
+    height: 100%;
+    background-color: #fff;
+    background-image: none;
+    box-shadow: 0 0 0 10px rgba(255, 255, 255, 0.4);
+  }
+
+  .btn-show-left-area {
+    display: flex;
+  }
+
+  .content-section-line,
+  .content-part-line {
+    flex-direction: column;
+  }
+
+  .image-wrapper {
+    margin: 10px 0;
+  }
+
+  .video-name.tiny,
+  .video-subtext.tiny {
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  .access-link-wrapper {
+    width: 33.3%;
+  }
+}
+@media screen and (max-width: 520px) {
+  body {
+    padding: 0;
+  }
+
+  .app-container {
+    border-radius: 0;
+  }
+
+  .content-section {
+    padding: 0 20px;
+  }
+
+  .content-section-line {
+    margin: 0;
+  }
+}
