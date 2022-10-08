@@ -1,3 +1,4 @@
+require('dotenv').config()
 var express = require('express');
 var router = express.Router();
 const multer = require('multer');
@@ -23,7 +24,7 @@ router.post('/upload', upload.single("file"), async (req, res) => {
   }
 
   const file = await File.create(fileData)
-  res.render('index', { fileLink: `${req.headers.origin}/file/${file.id}` , title: 'New Share | Share securely'} )
+  res.render('index', { fileLink: `${process.env.APP_BASE_URL}/file/${file.id}` , title: 'New Share | Share securely'} )
 
 })
 
