@@ -13,7 +13,7 @@
 <h5 align="center">Don't forget to give a ⭐️ </h5>
 <hr>
 
-![screenshot](public/images/preview.png)
+![screenshot](public/images/preview.gif)
 
 
 ## 🛠 Overview
