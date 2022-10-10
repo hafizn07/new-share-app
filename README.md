@@ -21,6 +21,7 @@
 - Static app
 - Based on Node Js Express
 - Used EJS as templating engine.
+- MongoDB as Database.
 - Stunning UI
 
 ## 🚀 Built with
