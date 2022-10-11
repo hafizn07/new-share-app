@@ -8,7 +8,7 @@
 
 <p align="center">
   <a href="#🛠-overview">Overview</a> •
-  <a href="#🚀-built-with">Build with</a> •
+  <a href="#🚀-built-with">Build with</a>
 </p>
 <h5 align="center">Don't forget to give a ⭐️ </h5>
 <hr>
